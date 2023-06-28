@@ -16,8 +16,42 @@
 
 # print(a, b) # 5 10
 
-print('Hello there!')
-city = input('What is the city you were born in? \n')
-pet = input('What is the name of your first pet? \n')
+# print('Hello there!')
+# city = input('What is the city you were born in? \n')
+# pet = input('What is the name of your first pet? \n')
 
-print('Your bands name will be: \n' + city + " " + pet)
+# print('Your bands name will be: \n' + city + " " + pet)
+
+# str = 'Hello'
+# length = len(str)
+# print(str[length - 1]) # 'o'
+
+# print(int(12.5))
+
+# num = input('Type a number: \n')
+# sum = int(num[0]) + int(num[1])
+# print(sum)
+
+# Total Bill Calculator:
+
+height = int(input("What is your height? \n"))
+bill = 0
+
+if height > 120:
+    print("You can ride rollercoaster!")
+    age = int(input("What is your age? \n"))
+    if age < 12:
+        bill += 5
+    elif age > 12 and age <= 18:
+        bill += 7
+    else:
+        bill += 12
+
+    photoes = bool(input("Do you want photoes? Type true or false. \n"))
+    if photoes:
+        bill += 3
+        print(f"Your bill is {bill} $")
+    else:
+        print(f"Your bill is {bill} $")
+else:
+    print("See you next year!")
