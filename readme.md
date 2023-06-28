@@ -118,6 +118,7 @@ The if-elif-else statement allows you to test multiple conditions and execute di
 4. nested if statements: 
 You can also nest conditional statements within each other to create more complex conditions.
 
+```
       x = 10
       y = 5
 
@@ -128,6 +129,7 @@ You can also nest conditional statements within each other to create more comple
               print("x is greater than 5 but y is not greater than 2")
       else:
           print("x is not greater than 5")
+```
 
 NB: Pay attention to spaces tabs and indentation in general because Python is extremely indentation-sensitive! There is even a special type of errors: IndentationError.
 
