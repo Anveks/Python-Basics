@@ -6,6 +6,25 @@ AND askpython: https://www.askpython.com/ .
 
 Python is a versatile and widely-used programming language known for its simplicity and readability. It was created by Guido van Rossum and first released in 1991. Python is an interpreted, high-level language, meaning it is designed to be easy to understand and write code quickly.
 
+Table of Contents:
+   1.1. [Indentation in Python](#indentation-in-python)
+      1.1.1. [print() function](#print-function)
+      1.1.2. [input(promps) function](#inputpromps-function)
+   1.2. [Python Variables](#python-variables)
+   1.3. [Python Data Types](#python-data-types)
+      1.3.1. [f-String](#f-string)
+   1.4. [Conditional Statements](#conditional-statements)
+   1.5. [Randomisation in Python](#randomisation-in-python)
+   1.6. [Python Lists](#python-lists)
+   1.7. [For Loop](#for-loop)
+   1.8. [Functions in Python](#functions-in-python)
+
+## Indentation in Python
+
+In Python, indentation plays a crucial role in defining the structure and hierarchy of the code. Unlike many other programming languages that use curly braces or keywords to denote code blocks, Python uses indentation to indicate the grouping of statements.
+
+Indentation refers to the spaces or tabs placed at the beginning of a line to position the code relative to the surrounding blocks. It is used to define the scope of control structures (such as loops and conditionals) and the body of functions, classes, and other code blocks.
+
 ### print() function
 
 print() function simply prints everything inside the parenthesis in the console. Similar to console.log() in JS.
@@ -222,3 +241,21 @@ In JS:
             for (i = 0; i < arr.length; i++){
                   console.log(arr[i])
             }
+
+## Functions in Python
+
+Here's the syntax for defining a function in Python:
+
+```
+            def function_name(parameters):
+                  # Function body
+                  # Code block
+                  # Statements
+
+                  # Optional: return statement
+                  return value
+```
+
+def: a keyword that indicates the start of a function definition.
+
+NB: ALWAYS be careful with the indentation. 
