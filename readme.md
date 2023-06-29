@@ -2,6 +2,8 @@
 
 This tutorial is based on a few online courses and largely on Python documentation: https://docs.python.org/3/ .
 
+AND askpython: https://www.askpython.com/ .
+
 Python is a versatile and widely-used programming language known for its simplicity and readability. It was created by Guido van Rossum and first released in 1991. Python is an interpreted, high-level language, meaning it is designed to be easy to understand and write code quickly.
 
 ### print() function
@@ -56,7 +58,7 @@ Python is very type-sensitive so for example this:
       age = 12
       print("you are " + age + "years old")
 
-Will return a TypeError because we cannot concatenate strings with numbers. Unlike in JS where 12 will be automatically converted in a string after seeing a + operator.      
+Will return a TypeError because we cannot concatenate strings with numbers. Unlike in JS where 12 will be automatically converted in a string after a + operator.      
 
 1. Numeric types:
 int: age = 25
@@ -134,3 +136,59 @@ You can also nest conditional statements within each other to create more comple
 NB: Pay attention to spaces tabs and indentation in general because Python is extremely indentation-sensitive! There is even a special type of errors: IndentationError.
 
 Comparison operators are the same as they are in JS. = goes for asssignment, == checks equality. 
+
+## Randomisation in Python
+
+Randomization in Python refers to the generation of random values or the shuffling of existing data. The random module in Python provides functions and methods for working with random numbers and randomness. It uses various mechanisms to generate random values.
+
+Python's random module uses a pseudorandom number generator (PRNG) to generate random numbers. PRNGs are algorithms that produce sequences of numbers that appear to be random but are actually deterministic. The random module uses the Mersenne Twister algorithm, which is a widely-used PRNG, to generate random numbers.
+
+An article about Mersenne Twister: https://en.wikipedia.org/wiki/Mersenne_Twister .
+
+Basically what you need to do is to import a buil-in random module:
+
+      import random
+
+And then use it's methods to create random numbers:
+
+      random_integer = random.randint(1, 10)
+
+For floats:
+
+      random_float: random.random()
+
+for decimals:
+
+      from decimal import Decimal
+
+      num1 = Decimal('0.1')
+
+## Python Lists
+
+One of the container datatypes existing in Python. Is really similar to an Array in JS.
+
+Similarities:
+
+- Indexed Access: Both Python lists and JS arrays allow access to individual elements using their index. The indexing starts from 0.
+- Mixed Data Types: Both Python lists and JS arrays can contain elements of different data types, including numbers, strings, objects, and even other lists or arrays.
+- Dynamic Size: Both Python lists and JS arrays can change in size dynamically. Elements can be added or removed from the collection.
+
+Differences:
+
+- Syntax: The syntax for defining and working with lists and arrays differs between Python and JS. In Python, lists are enclosed in square brackets ([]), while in JS, arrays are defined using square brackets ([]) or the Array constructor.
+- Flexible Length: Python lists can have a flexible length, meaning they can contain a different number of elements at different points in time. In JS, arrays are also flexible in length, and the length can change dynamically.
+- Built-in Methods and Functions: Python lists and JS arrays have different built-in methods and functions available for manipulating and working with them. The specific methods and functions provided differ between the two languages.
+- Underlying Implementation: Internally, Python lists and JS arrays are implemented differently. Python lists are implemented as dynamic arrays, while JS arrays can be implemented as sparse arrays or dynamic objects.
+
+You can modify an element of a List by acessing it with its index:
+
+            list = [a, b, c]
+            list[0] = d
+
+You can also add new List inside:
+
+            list.extend([f, g]) // this will be added 
+
+OR:
+
+            list.insert("x") // for adding single elements

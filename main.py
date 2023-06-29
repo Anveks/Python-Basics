@@ -58,18 +58,25 @@
 
 # Score Calculator:
 
-name_a = input("Enter the first name: ").lower()
-name_b = input("Enter the second name: ").lower()
-two_names = name_a + name_b
+# name_a = input("Enter the first name: ").lower()
+# name_b = input("Enter the second name: ").lower()
+# two_names = name_a + name_b
 
-first_num = int(two_names.count('t')) + int(two_names.count('r')) + int(two_names.count('u')) + int(two_names.count('e'))
-second_num = int(two_names.count('l')) + int(two_names.count('o')) + int(two_names.count('v')) + int(two_names.count('e'))
+# first_num = int(two_names.count('t')) + int(two_names.count('r')) + int(two_names.count('u')) + int(two_names.count('e'))
+# second_num = int(two_names.count('l')) + int(two_names.count('o')) + int(two_names.count('v')) + int(two_names.count('e'))
 
-total = int(str(first_num) + str(second_num))
+# total = int(str(first_num) + str(second_num))
 
-if total < 10 or total > 90:
-    print(f"Your score is {total}, you go together like coke and mentos.")
-elif total > 40 and total < 50:
-    print(f"Your score is {total}, you are alright together.")
-else:
-    print(f"Your score is {total}, I have no idea.")
+# if total < 10 or total > 90:
+#     print(f"Your score is {total}, you go together like coke and mentos.")
+# elif total > 40 and total < 50:
+#     print(f"Your score is {total}, you are alright together.")
+# else:
+#     print(f"Your score is {total}, I have no idea.")
+
+import random
+names_str = input('Give me a list of names \n')
+names = names_str.split(" ")
+random_integer = random.randint(0, len(names) - 1)
+winner = names[random_integer]
+print(winner)
