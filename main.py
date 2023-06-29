@@ -74,9 +74,44 @@
 # else:
 #     print(f"Your score is {total}, I have no idea.")
 
-import random
-names_str = input('Give me a list of names \n')
-names = names_str.split(" ")
-random_integer = random.randint(0, len(names) - 1)
-winner = names[random_integer]
-print(winner)
+# import random
+# names_str = input('Give me a list of names \n')
+# names = names_str.split(" ")
+# random_integer = random.randint(0, len(names) - 1)
+# winner = names[random_integer]
+# print(winner)
+
+# LOOPS
+
+# heights = [ 182, 170, 165, 190, 175]
+# sum = 0
+# num_of_elems = 0
+
+# for height in heights:
+#     sum += height
+#     num_of_elems += 1
+
+# average = sum / num_of_elems
+# print(average)
+
+#  max score in a loop:
+
+# student_scores = input("Type all the student scores here: \n")
+# student_scores_list = student_scores.split()  # Split the input string into a list
+
+# for n in range(0, len(student_scores_list)):
+#     student_scores_list[n] = int(student_scores_list[n])
+
+# print(student_scores_list)
+
+# max_score = 0
+# for score in student_scores_list:
+#     if score > max_score:
+#         max_score = score
+
+# print(max_score)
+
+# SUM OF EVEN (classic)
+
+    
+

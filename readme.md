@@ -192,3 +192,33 @@ You can also add new List inside:
 OR:
 
             list.insert("x") // for adding single elements
+
+And to delete an element:
+
+            list.pop(1) // stating the index
+            list.remove(1) // does the same
+
+            del list[1] // will delete the first element
+
+## For Loop 
+
+In Python, you can use a for loop to iterate over a sequence of elements such as a list, tuple, string, or range. The basic syntax of a for loop in Python is as follows:
+
+            for item in sequence:
+                  # Code block to be executed for each item
+
+You can also combine a for loop with other control flow statements, such as if statements, to perform conditional operations or control the flow of execution within the loop. Additionally, you can use the range() function to generate a sequence of numbers and iterate over it using a for loop.
+
+            list = [1,2,3]
+            for num in range([start], [stop], [step]):
+                  print(num)
+
+start will be the starting index
+stop will be the whole length
+step will be specification of an increment
+
+In JS:
+
+            for (i = 0; i < arr.length; i++){
+                  console.log(arr[i])
+            }
