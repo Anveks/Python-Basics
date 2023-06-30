@@ -242,6 +242,30 @@ In JS:
                   console.log(arr[i])
             }
 
+## While Loop
+
+As in JS, allows you to repeatedly execute a block of code as long as a specified condition is true. The general syntax of a while loop in Python is as follows:
+
+```
+            while condition:
+                  # Code block to be executed
+```
+
+It's important to ensure that the condition within the while loop eventually becomes false; otherwise, the loop will continue indefinitely, resulting in an infinite loop. To avoid infinite loops, make sure to include code within the loop that can modify the condition or break out of the loop when necessary.
+
+Here's an example that demonstrates how to exit a while loop using a break statement:
+
+            count = 1
+            while True:
+                  print(count)
+                  count += 1
+                  if count > 5:
+                        break
+
+The main difference between a for loop and a while loop is that a for loop is used for iterating over a known sequence, while a while loop is used for executing a block of code repeatedly as long as a specified condition is true.\
+
+NB: Be aware of intinite loops! That's why while loops are less preferable in coding than for loops.
+
 ## Functions in Python
 
 Here's the syntax for defining a function in Python:
@@ -259,3 +283,23 @@ Here's the syntax for defining a function in Python:
 def: a keyword that indicates the start of a function definition.
 
 NB: ALWAYS be careful with the indentation. 
+
+### NOT IN Operator
+
+In Python, the keyword not in is a logical operator used to check if a value does not exist in a sequence, such as a string, list, or tuple. It is the negation of the in operator.
+
+Here's the syntax:
+
+```
+            fruits = ['apple', 'banana', 'orange']
+
+            # Check if 'mango' is not in the list
+            if 'mango' not in fruits:
+            print("Mango is not in the list.")
+
+            # Check if 'banana' is not in the list
+            if 'banana' not in fruits:
+            print("Banana is not in the list.")
+            else:
+            print("Banana is in the list.")
+```

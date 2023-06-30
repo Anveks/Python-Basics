@@ -1,0 +1,9 @@
+#  planning:
+
+# 1. create a list of words to guess
+# 2. create a variable with a number of tries
+# 3. when user wants to start a game, let the randomizer pick a random index within the list of words
+# split the word into letters
+# each time a user inputs a letter, check if there is a match with a list of letters, if yes - give him another input, if no - minus one try + another input
+# on 0 tries - game over, so basically we need a while tries != 0 continue
+# each time user guesses a letter the programm should place it in the very same index as the original word so we need a result-word 
