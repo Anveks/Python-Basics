@@ -111,7 +111,16 @@
 
 # print(max_score)
 
-# SUM OF EVEN (classic)
+# functions practice
+
+def calcPaintCans(h,w):
+    cans = (h * w) / 5
+    print(f'For such a wall you will need {cans} cans of paint.')
+
+height = int(input('Whats the height of the wall? \n'))
+width = int(input('Whats the width of the wall? \n'))
+
+calcPaintCans(h=height, w=width)    
 
     
 

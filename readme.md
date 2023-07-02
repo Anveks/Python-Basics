@@ -156,6 +156,26 @@ NB: Pay attention to spaces tabs and indentation in general because Python is ex
 
 Comparison operators are the same as they are in JS. = goes for asssignment, == checks equality. 
 
+### NOT IN Operator
+
+In Python, the keyword not in is a logical operator used to check if a value does not exist in a sequence, such as a string, list, or tuple. It is the negation of the in operator.
+
+Here's the syntax:
+
+```
+            fruits = ['apple', 'banana', 'orange']
+
+            # Check if 'mango' is not in the list
+            if 'mango' not in fruits:
+            print("Mango is not in the list.")
+
+            # Check if 'banana' is not in the list
+            if 'banana' not in fruits:
+            print("Banana is not in the list.")
+            else:
+            print("Banana is in the list.")
+```
+
 ## Randomisation in Python
 
 Randomization in Python refers to the generation of random values or the shuffling of existing data. The random module in Python provides functions and methods for working with random numbers and randomness. It uses various mechanisms to generate random values.
@@ -284,22 +304,57 @@ def: a keyword that indicates the start of a function definition.
 
 NB: ALWAYS be careful with the indentation. 
 
-### NOT IN Operator
+### Function Parameter vs Function Argument 
 
-In Python, the keyword not in is a logical operator used to check if a value does not exist in a sequence, such as a string, list, or tuple. It is the negation of the in operator.
+The terms "function parameter" and "function argument" are often used interchangeably, but they are actually two different things!
 
-Here's the syntax:
+In Python and JavaScript:
+
+- Function Parameter: A function parameter is a variable or placeholder declared in the function definition. It represents a value that the function expects to receive when it is called. Parameters are specified in the parentheses after the function name. For example, in Python:
 
 ```
-            fruits = ['apple', 'banana', 'orange']
+            def greet(name):
+                  print("Hello, " + name + "!")
 
-            # Check if 'mango' is not in the list
-            if 'mango' not in fruits:
-            print("Mango is not in the list.")
-
-            # Check if 'banana' is not in the list
-            if 'banana' not in fruits:
-            print("Banana is not in the list.")
-            else:
-            print("Banana is in the list.")
+                  greet("Alice")
 ```
+Here 'name' is function parameter.
+
+- Function Argument: A function argument is the actual value that is passed to a function when it is called. It is the value that gets assigned to the corresponding function parameter. In the example above, "Alice" is the argument passed to the greet function.
+
+### Positional vs Keyword Arguments
+
+In both Python and JavaScript, function arguments can be categorized as positional arguments or keyword arguments based on how they are passed to a function.
+
+1. Positional Arguments:
+
+- Positional arguments are arguments that are passed to a function based on their position or order.
+- The order of the arguments in the function call must match the order of the parameters in the function definition.
+- Positional arguments are commonly used when the function has a fixed number of parameters and the order of the arguments is important.
+
+```
+            def add(a, b):
+                  return a + b
+
+                  result = add(3, 5)
+                  print(result)  # Output: 8
+```
+2. Keyword Arguments:
+
+- Keyword arguments are arguments that are passed to a function using the parameter names as keywords.
+- The order of the arguments does not matter when using keyword arguments.
+- Keyword arguments are useful when a function has a large number of optional parameters or when you want to make the code more readable by explicitly specifying the arguments.
+
+
+            def greet(name, age):
+                  print("Hello, " + name + "! You are " + str(age) + " years old.")
+
+                  greet(name="Alice", age=25)
+
+JavaScript does not have built-in support for keyword arguments like Python. However, you can achieve a similar effect by passing an object and using its properties as named arguments.
+
+            function greet(options) {
+                  console.log("Hello, " + options.name + "! You are " + options.age + " years old.");
+                  }
+
+            greet({ name: "Alice", age: 25 });
