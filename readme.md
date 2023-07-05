@@ -358,3 +358,69 @@ JavaScript does not have built-in support for keyword arguments like Python. How
                   }
 
             greet({ name: "Alice", age: 25 });
+
+## Dictionaries in Python
+
+In Python, a dictionary is a built-in data structure that allows you to store and retrieve data in key-value pairs. It is also known as an associative array or a hash map in other programming languages.
+
+In Python, dictionaries are defined using curly braces {} and use colons : to separate keys and values. Here's an example:
+
+            person = {
+                  "name": "John",
+                  "age": 25,
+                  "city": "New York"
+                  }
+
+You can access the values in a dictionary by using the keys as the index. For example:
+
+            print(person["name"])  # Output: John
+            print(person["age"])   # Output: 25
+            print(person["city"])  # Output: New York
+
+You can also modify the values in a dictionary or add new key-value pairs:
+
+            person["age"] = 26  # Modifying the value of an existing key
+            person["occupation"] = "Engineer"  # Adding a new key-value pair
+
+And you can loop through the keys of a dictionary:
+
+            for key in person:
+                  print(key) # to log keys
+                  print(person[key]) to log values
+
+## Useful Modules:
+
+Python offers a rich ecosystem of modules and packages that provide various functionalities for different purposes. Here are some commonly used and highly useful modules:
+
+- os - Provides functions for interacting with the operating system, such as working with files and directories.
+- sys - Offers system-specific parameters and functions, including system-level operations and command-line arguments.
+- math - Provides mathematical operations and functions.
+- random - Enables generation of random numbers, selections, and shuffling.
+- datetime - Offers classes for manipulating dates, times, and time intervals.
+- json - Allows encoding and decoding of JSON data.
+- csv - Provides functionality for reading and writing CSV files.
+- requests - Enables sending HTTP requests and interacting with web services.
+- sqlite3 - Provides an interface to work with SQLite databases.
+- logging - Offers a flexible logging system for recording events and messages during program execution.
+- re - Provides regular expression matching operations for pattern searching and text manipulation.
+- unittest - Offers a framework for writing and running unit tests.
+
+## Docstrings in Python
+
+In Python, a docstring is a string literal used to document modules, classes, functions, and methods. It serves as a documentation string that provides information about the object and its intended usage. Docstrings are enclosed in triple quotes (either single or double quotes) and are placed immediately after the definition of the object.
+
+Here's an example of a docstring for a function:
+
+```
+            def greet(name):
+                  """Greet a person by name.
+                  
+                  Args:
+                        name (str): The name of the person to greet.
+                  
+                  Returns:
+                        str: A greeting message with the person's name.
+                  """
+                  return f"Hello, {name}!"
+```
+Each time you want to use a function that has a docstring inside, a little documentation window will pop up showing you the text you've typed inside the docstring. 

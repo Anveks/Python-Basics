@@ -111,16 +111,105 @@
 
 # print(max_score)
 
-# functions practice
+# functions practice:
 
-def calcPaintCans(h,w):
-    cans = (h * w) / 5
-    print(f'For such a wall you will need {cans} cans of paint.')
+# def calcPaintCans(h,w):
+#     cans = (h * w) / 5
+#     print(f'For such a wall you will need {cans} cans of paint.')
 
-height = int(input('Whats the height of the wall? \n'))
-width = int(input('Whats the width of the wall? \n'))
+# height = int(input('Whats the height of the wall? \n'))
+# width = int(input('Whats the width of the wall? \n'))
 
-calcPaintCans(h=height, w=width)    
+# calcPaintCans(h=height, w=width)    
+
+# dictionaries practice:
+
+# student_scores = {
+#     'Harry': 81,
+#     'Ron': 78,
+#     'Hermione': 99,
+#     'Draco': 75,
+#     'Neville': 68,
+# }
+
+# student_grades = {}
+
+# def convert_scores(score):
+#     if score <= 100 and score >= 91:
+#         return 'Outstanding'
+#     elif score <= 91 and score >= 81:
+#         return 'Exceeds Expectations'
+#     elif score <= 81 and score >= 71:
+#         return 'Acceptable'
+#     elif score <= 71:
+#         return 'Fail'
+
+# for key in student_scores:
+#     student_grades[key] = convert_scores(student_scores[key])
+
+# print(student_grades)
+
+#  travel log ex
+
+# travel_log = [
+# {
+#   "country": "France",
+#   "visits": 12,
+#   "cities": ["Paris", "Lille", "Dijon"]
+# },
+# {
+#   "country": "Germany",
+#   "visits": 5,
+#   "cities": ["Berlin", "Hamburg", "Stuttgart"]
+# },
+# ]
+
+# def add_new_country(country, visits, cities):
+#    new_country = {
+#         'country': country,
+#         'visits': visits,
+#         'cities': cities
+#    }
+#    travel_log.append(new_country)
+
+# add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
+# print(travel_log)
+
+#  highest bidder ex:
+
+def is_leap(year):
+  if year % 4 == 0:
+    if year % 100 == 0:
+      if year % 400 == 0:
+        return True
+      else:
+         return False
+    else:
+       return True
+  else:
+    return False
+
+def days_in_month(year, month):
+  if year < 0 or month > 12: return 'Invalid date.'
+  month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]  
+  if is_leap(year) and month == 2: return int(month_days[month - 1]) + 1
+  else: return month_days[month - 1]
+  
+year = int(input("Enter a year: "))
+month = int(input("Enter a month: "))
+days = days_in_month(year, month)
+print(days)
+
+
+
+
+
+
+
+
+
+
+
 
     
 
