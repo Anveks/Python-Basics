@@ -424,3 +424,17 @@ Here's an example of a docstring for a function:
                   return f"Hello, {name}!"
 ```
 Each time you want to use a function that has a docstring inside, a little documentation window will pop up showing you the text you've typed inside the docstring. 
+
+## Notes on: While Loops, Flags and Recursion
+
+In Python, a "flag" typically refers to a boolean variable that is used to control the flow of a program or indicate a certain condition or state. It is commonly used in conditional statements and loops to determine whether certain actions should be taken.
+
+**Flags** are named after the concept of a flag used in real life, where a flag can be raised or lowered to indicate a specific signal or message. Similarly, in programming, a flag variable can be set or cleared to indicate a particular condition.
+
+Flags can be used in various scenarios, such as controlling program flow, indicating the success or failure of an operation, or enabling/disabling certain functionality based on a condition. They provide a simple and effective way to control the behavior of a program.
+
+**Recursion** is a programming technique where a function calls itself to solve a problem by breaking it down into smaller subproblems. In the context of loops, recursion provides an alternative way to repeat a block of code.
+
+A **while loop** is a control flow statement that repeatedly executes a block of code as long as a specified condition is true. It is used when you need to repeat a block of code an unknown number of times until a certain condition is met.
+
+One of the good techniques from my own experience is to use recursion + while loops + boolean flags to control the code and achieve the needed results. See the *calculator.py* for more details.
