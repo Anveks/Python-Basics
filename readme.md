@@ -438,3 +438,41 @@ Flags can be used in various scenarios, such as controlling program flow, indica
 A **while loop** is a control flow statement that repeatedly executes a block of code as long as a specified condition is true. It is used when you need to repeat a block of code an unknown number of times until a certain condition is met.
 
 One of the good techniques from my own experience is to use recursion + while loops + boolean flags to control the code and achieve the needed results. See the *calculator.py* for more details.
+
+## Local vs Global Scopes in Python:
+
+In Python, variables can have either local or global scope, depending on where they are defined. The scope of a variable determines its visibility and accessibility throughout the program.
+
+1. Local Scope:
+- Variables defined within a function have local scope.
+- They are accessible only within the function where they are defined.
+- Local variables are created when the function is called and destroyed when the function completes execution.
+- Local variables cannot be accessed from outside the function.
+
+2. Global Scope:
+- Variables defined outside any function or block have global scope.
+- They are accessible throughout the entire program.
+- Global variables are created when the program starts and destroyed when the program ends.
+- Global variables can be accessed and modified from any part of the program.
+
+Example for a global scope and 'global' keyword:
+
+            x = 10  # Global variable
+
+            def my_function():
+             print(x)
+
+            my_function()  # Output: 10
+             print(x)  # Output: 10
+
+            def another_function():
+             global x  # Access the global variable
+             x = 20
+             print(x)
+
+            another_function()  # Output: 20
+             print(x)  # Output: 20
+
+It's generally recommended to use local variables within functions to encapsulate and isolate the logic. However, when you need to modify a global variable from within a function, you can use the global keyword to indicate that you want to access the global variable instead of creating a new local variable with the same name.
+
+Note: It's good practice to minimize the use of global variables and prefer passing arguments and returning values between functions to maintain code clarity and avoid unexpected side effects.
