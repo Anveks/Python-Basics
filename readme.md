@@ -4,6 +4,8 @@ This tutorial is based on a few online courses and largely on Python documentati
 
 AND askpython: https://www.askpython.com/ .
 
+NB: An amazing site that visualizes code execution: https://pythontutor.com/ . Not only Python, also JS, C, Java, etc.
+
 Python is a versatile and widely-used programming language known for its simplicity and readability. It was created by Guido van Rossum and first released in 1991. Python is an interpreted, high-level language, meaning it is designed to be easy to understand and write code quickly.
 
 Table of Contents:
@@ -476,3 +478,25 @@ Example for a global scope and 'global' keyword:
 It's generally recommended to use local variables within functions to encapsulate and isolate the logic. However, when you need to modify a global variable from within a function, you can use the global keyword to indicate that you want to access the global variable instead of creating a new local variable with the same name.
 
 Note: It's good practice to minimize the use of global variables and prefer passing arguments and returning values between functions to maintain code clarity and avoid unexpected side effects.
+
+## Common Python Error Types:
+
+1. SyntaxError: This error occurs when there is a mistake in the syntax of the Python code, such as missing parentheses, missing colons, or incorrect indentation.
+
+2. NameError: This error occurs when you try to use a variable or function name that has not been defined or is not in the current scope.
+
+3. TypeError: This error occurs when an operation or function is performed on an object of an inappropriate type. For example, trying to concatenate a string with an integer or calling a function that expects a certain type of argument with the wrong type.
+
+4. IndexError: This error occurs when you try to access an element of a sequence (such as a list or string) using an invalid index, such as an index that is out of range.
+
+5. ValueError: This error occurs when a function receives an argument of the correct type but with an invalid value. For example, passing a negative number to a function that expects a positive number.
+
+6. KeyError: This error occurs when you try to access a dictionary using a key that does not exist in the dictionary.
+
+7. AttributeError: This error occurs when you try to access an attribute or method of an object that does not exist.
+
+8. IndentationError: This error occurs when there is a problem with the indentation of the code. Python relies on indentation to define the structure of the code, so incorrect or inconsistent indentation can lead to this error.
+
+9. ImportError: This error occurs when you try to import a module that does not exist or cannot be found.
+
+10. IOError: This error occurs when there is an input/output problem, such as trying to open a file that does not exist or is not accessible.
