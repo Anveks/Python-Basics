@@ -500,3 +500,23 @@ Note: It's good practice to minimize the use of global variables and prefer pass
 9. ImportError: This error occurs when you try to import a module that does not exist or cannot be found.
 
 10. IOError: This error occurs when there is an input/output problem, such as trying to open a file that does not exist or is not accessible.
+
+## OOP in Python: 💘
+
+OOP stands for Object Oriented Programming. Before that the lead programming paradigm was PP: procedural programming.
+
+**Procedural programming** is a programming paradigm that emphasizes the sequential execution of procedures or subroutines to solve a problem. It focuses on organizing code into reusable procedures or functions that perform specific tasks. PP is used in languages like COBOL (1959) or Fortran (1957).
+
+In procedural programming, the focus is on writing procedures or functions that manipulate data, and the code is structured around these procedures. It is suitable for simpler programs or situations where data and functions are kept separate.
+
+On the other hand,**OOP** focuses on creating objects that encapsulate data and behavior, allowing for more modular and reusable code. It is well-suited for complex systems, promotes code organization, and provides concepts like inheritance and polymorphism to facilitate code reuse and modularity.
+
+### The Three Major OOP Concepts:
+
+The three major concepts of object-oriented programming (OOP) are encapsulation, inheritance, and polymorphism. Here's a brief explanation of each concept:
+
+1. **Encapsulation**: Encapsulation is the process of bundling data and methods (functions) together within a class, hiding the internal details and providing a public interface for interacting with the object. It ensures that data is accessed and modified through controlled methods, maintaining data integrity and preventing unauthorized access.
+
+2. **Inheritance**: Inheritance is a mechanism that allows objects to inherit properties and behaviors from parent classes (superclasses) to child classes (subclasses). It promotes code reuse by enabling the creation of specialized classes that inherit and extend the attributes and methods of more general classes. Subclasses can add new features or modify existing ones while inheriting the common characteristics of the superclass.
+
+3. **Polymorphism**: Polymorphism means the ability of objects to take on multiple forms. It allows objects of different classes to be treated as objects of a common superclass, enabling code to be written that can work with objects of different types. Polymorphism is achieved through method overriding and method overloading. It enhances code flexibility, modularity, and extensibility.

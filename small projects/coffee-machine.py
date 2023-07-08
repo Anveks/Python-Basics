@@ -71,13 +71,14 @@ def make_coffee(coffee):
     if 'coffee' in coffee: resources['coffee'] -= coffee['coffee']
 
 
-continue_coffee = True
-
-while continue_coffee:
+while is_on:
     choice = input('What would you like?\n').lower()
 
     if choice == 'report':
-        print(resources)
+        print(f'Water: {resources["water"]} ml')
+        print(f'Milk: {resources["milk"]} ml')
+        print(f'Coffee: {resources["coffee"]} ml')
+        if 'money' in resources: print(f'Money: {resources["money"]} $')
     elif choice != 'report' and choice != 'off':
         selected_coffee = choice
         money = get_money()
@@ -95,21 +96,20 @@ while continue_coffee:
                 else:
                     resources['money'] += MENU[selected_coffee]['cost']
                 change = int(money - MENU[selected_coffee]['cost'])
-                print(resources)
                 if change != 0:
                     print(f'Enjoy your {selected_coffee} and come back soon! Your change is: {change} $')
                     to_continue = input('Do you want another coffee?\n').lower()
                     if to_continue != 'no':
                         continue
                     else:
-                        continue_coffee = False
+                        is_on = False
                 else:
                     print(f'Enjoy your {selected_coffee} and come back soon!')
                     to_continue = input('Do you want another coffee?\n').lower()
                     if to_continue != 'no':
                         continue
                     else:
-                        continue_coffee = False
+                        is_on = False
     elif choice == 'off':
         print('Turning off...')
         is_on = False
