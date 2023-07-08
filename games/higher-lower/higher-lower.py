@@ -6,7 +6,7 @@ print('Welcome to the higher-lower game. \nThe rules are simple: you get two Ins
 
 GAME_DATA = data.data
 
-# function that returns a random elem from the game data list:
+# function that returns a random elem from the game data list (probably this function is not needed...):
 def get_random_account():
     return random.choice(GAME_DATA)
 

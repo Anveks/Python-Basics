@@ -5,3 +5,5 @@ planning:
 2. the whole code body should be in a while loop untill its game_over
 3. create two variables for two accounts; get them randomly from the data 
 4. get a user input called choice: A or B
+...
+5. use your chaos and get to the final result
