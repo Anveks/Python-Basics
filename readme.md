@@ -511,6 +511,8 @@ In procedural programming, the focus is on writing procedures or functions that 
 
 On the other hand,**OOP** focuses on creating objects that encapsulate data and behavior, allowing for more modular and reusable code. It is well-suited for complex systems, promotes code organization, and provides concepts like inheritance and polymorphism to facilitate code reuse and modularity.
 
+**NB: Difference in syntax** - in JS we can create a new instance of a class by using the 'new' keyword; in Python you can do so simply by calling a class as if it was a function. 
+
 ### The Three Major OOP Concepts:
 
 The three major concepts of object-oriented programming (OOP) are encapsulation, inheritance, and polymorphism. Here's a brief explanation of each concept:
@@ -520,3 +522,48 @@ The three major concepts of object-oriented programming (OOP) are encapsulation,
 2. **Inheritance**: Inheritance is a mechanism that allows objects to inherit properties and behaviors from parent classes (superclasses) to child classes (subclasses). It promotes code reuse by enabling the creation of specialized classes that inherit and extend the attributes and methods of more general classes. Subclasses can add new features or modify existing ones while inheriting the common characteristics of the superclass.
 
 3. **Polymorphism**: Polymorphism means the ability of objects to take on multiple forms. It allows objects of different classes to be treated as objects of a common superclass, enabling code to be written that can work with objects of different types. Polymorphism is achieved through method overriding and method overloading. It enhances code flexibility, modularity, and extensibility.
+
+## Python Classes and their Syntax
+
+
+
+### Small Note on Dot Notation in Python
+
+Unlike in JS, in Python you cannot acces the values of a dictionary by using dot notation right away:
+
+            my_dict = {'key1': 'value1', 'key2': 'value2'}
+
+            print(my_dict.key1) # will throw an error
+
+The right way to do it is by using **square brackets notation**:
+
+            print(my_dict['key1'])
+
+OR: the built-in get() method (because after all dictionaries are objects):
+
+            print(my_dict.get('key1'))
+
+Dot notation is typically used to access attributes of **objects** or **class** variables. There is of course a way to convert a dictionary into an object of a custom class, but generally it is not recommended.
+
+In short: 
+- JavaScript: allows both square bracket and dot notations with no differense whether it is an object or a class;
+- Python: square notation for dictionaries, dot notation for objects and classes;
+
+## Packages vs Modules
+
+Basically each .py file you create is a module. Typically contains functions, classes and variables that you can use throughout your code by importing it here and there.
+
+A **package** is a directory that contains multiple Python modules and an additional "init_.py" file - an empty file that contains initialization code for the package. 
+
+To installa Python package in VSCode, open the project terminal and type:
+
+            pip install *package-name*
+
+Then you can import it anywhere as usual.
+
+**NB**: The *requirements file* is not created automatically! To create one, you should open the terminal in project's directory and run:
+
+            pip freeze > requirements.txt
+
+This command will write all the installed package names and their versions to a file named requirements.txt in your current directory.
+
