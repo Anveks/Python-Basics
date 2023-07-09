@@ -525,7 +525,33 @@ The three major concepts of object-oriented programming (OOP) are encapsulation,
 
 ## Python Classes and their Syntax
 
+Formation of a class with a class keyword, methods and attributes are pretty much the same in Python as they are in JavaScript, yet there are few differences in syntax:
 
+1. Constructor:
+Is the first function that is being called when you create a new instance of a class. In Python, it is represented by init function:
+
+```
+            class Person:
+               def __init__(self, name, age):
+                  self.name = name
+                  self.age = age
+```
+
+2. "self": 
+'self'  is the conventional name used as the first parameter in a method of a class (a constructor function is also a method!). It is a reference to the instance of the class on which the method is called. It is used to access instance variables and call other methods within the class. Same as 'this' in JavaScript.
+
+3. Inheritance:
+In JavaScript, if you want to create a class based on another class (inherit methods and attributes from it), you use the 'extends' keyword. While in Python the syntax runs as follows:
+
+```
+                  class BaseClass:
+                        def base_method(self):
+                              print("Base method")
+
+                  class DerivedClass(BaseClass):
+                        def derived_method(self):
+                              print("Derived method")  
+```
 
 ### Small Note on Dot Notation in Python
 
