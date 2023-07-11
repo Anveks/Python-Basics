@@ -111,6 +111,28 @@ You can check the length of a string by using the len() method.
 5. None type:
 None: result = None
 
+## Python Tuple
+
+A tuple is a type of data in Python. It is an ordered collection of elements, enclosed in parentheses (). It is similar to a list but has some key differences:
+
+- Immutability
+- Order
+- Can store different data types
+- Each element can be accessed by it index
+
+```
+            my_tuple = (1, 'hello', 3.14, True)
+
+            print(my_tuple[0])  # Access the first element
+            print(my_tuple[1])  # Access the second element
+            print(my_tuple[-1])  # Access the last element
+
+            # Slicing the tuple
+            print(my_tuple[1:3])  # Slice from index 1 to 2 (exclusive)
+```
+
+So the most important thing about Tuples is that they are immutable; you cannot modify their elements. However, you can create a new tuple by concatenating or slicing existing tuples.
+
 ### f-String
 
 An f-string, short for "formatted string literal," is a feature introduced in Python 3.6 that provides a concise and convenient way to embed expressions inside string literals. It allows you to interpolate variables, expressions, and even function calls directly into strings by prefixing the string with the letter "f" or "F" and enclosing the expressions within curly braces {}.
@@ -587,9 +609,45 @@ To installa Python package in VSCode, open the project terminal and type:
 
 Then you can import it anywhere as usual.
 
+**The main site for Python packages:** https://pypi.org/ .
+
 **NB**: The *requirements file* is not created automatically! To create one, you should open the terminal in project's directory and run:
 
             pip freeze > requirements.txt
 
 This command will write all the installed package names and their versions to a file named requirements.txt in your current directory.
 
+
+## Python Higher Order Functions and Event Listeners:
+
+In Python, higher-order functions are functions that can take other functions as arguments or return functions as results. They enable functional programming paradigms and allow you to write more expressive and modular code.
+
+Example:
+```
+            def add(a, b)
+              return a + b
+
+            def calc(a, b, add):
+              return add(a, b)
+```
+
+Python provides several built-in higher-order functions such as map(), filter(), and reduce().
+
+1. **filter()** function: It creates an iterator that filters out elements from an iterable based on a given function.
+
+            numbers = [1, 2, 3, 4, 5]
+            evens = list(filter(lambda x: x % 2 == 0, numbers))
+            print(evens)  # Output: [2, 4]
+
+2. **reduce()** function: It applies a rolling computation to a sequence of elements and returns a single value.
+
+            from functools import reduce
+            numbers = [1, 2, 3, 4, 5]
+            product = reduce(lambda x, y: x * y, numbers)
+            print(product)  # Output: 120
+
+3. **map()** function: It applies a given function to each item in an iterable (e.g., a list) and returns an iterator of the results.
+
+            numbers = [1, 2, 3, 4, 5]
+            squared = list(map(lambda x: x ** 2, numbers))
+            print(squared)  # Output: [1, 4, 9, 16, 25]
