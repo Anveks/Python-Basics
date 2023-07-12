@@ -657,3 +657,35 @@ Python provides several built-in higher-order functions such as map(), filter(),
             numbers = [1, 2, 3, 4, 5]
             squared = list(map(lambda x: x ** 2, numbers))
             print(squared)  # Output: [1, 4, 9, 16, 25]
+
+## Slicing Technique
+
+In Python, slicing is a technique used to extract a portion (a slice) of a sequence, such as a string, list, or tuple. It allows you to extract a specific range of elements from the sequence by specifying the start index, end index, and step size.
+
+Syntax:
+
+            sequence[start:end:step]
+
+Examples of usage:
+```
+            numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            letters = "Hello, World!"
+
+            # Extract a range of elements from a list
+            slice1 = numbers[2:6]  # [3, 4, 5, 6]
+            slice2 = numbers[:5]   # [1, 2, 3, 4, 5]
+            slice3 = numbers[5:]   # [6, 7, 8, 9, 10]
+            slice4 = numbers[1:9:2]  # [2, 4, 6, 8]
+
+            # Extract a range of characters from a string
+            slice5 = letters[7:12]   # "World"
+            slice6 = letters[::2]    # "Hlo ol!"
+            slice7 = letters[::-1]   # "!dlroW ,olleH" # reverse a list
+
+```
+
+In addition to lists and strings, slicing can also be applied to **tuples** and other iterable objects that **support indexing**.
+
+
+
+

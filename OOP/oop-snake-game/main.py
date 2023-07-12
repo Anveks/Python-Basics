@@ -27,10 +27,20 @@ while game_on:
   snake.move()
   scoreboard.set_scoreboard()
   
+  # collision with food:
   if snake.snake[0].distance(dot) < 15: # when a snake hits a dot - refresh random position
     dot.refresh()
     scoreboard.update_scoreboard()
+    snake.extend()
   
+  # collision with wall:
+  if snake.snake[0].xcor() > 280 or snake.snake[0].xcor() < -280 or snake.snake[0].ycor() > 280 or snake.snake[0].ycor() < -280:
+    game_on = False
+    scoreboard.game_over()
 
+  for segment in snake.snake[1:-1]:
+    if snake.snake[0].distance(segment) < 10:
+      game_on = False
+      scoreboard.game_over()
 
 screen.exitonclick()
