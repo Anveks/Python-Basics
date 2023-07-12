@@ -567,13 +567,19 @@ In JavaScript, if you want to create a class based on another class (inherit met
 
 ```
                   class BaseClass:
-                        def base_method(self):
-                              print("Base method")
+                        def __init__(self):
+                              self.greeting = 'Hello!'
+                        def greet(self):
+                              print(self.greeting)
 
                   class DerivedClass(BaseClass):
-                        def derived_method(self):
-                              print("Derived method")  
+                        def __init__(self):
+                              super().__init__() # inherit the init function
+
+                        def greet(self):
+                              super().greet()  # inherit a custom method
 ```
+NB: Don't forget about the super() function: the one that inherits all the methods and attributes from the parent-class stored inside the init() and ascribes them to the child-class.
 
 ### Small Note on Dot Notation in Python
 

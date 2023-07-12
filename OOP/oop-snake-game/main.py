@@ -1,6 +1,8 @@
-from turtle import Turtle, Screen
-import random
+from turtle import Screen
 import time
+from snake_model import Snake
+from dot_model import Dot
+from scoreboard_model import ScoreBoard
 
 game_on = True
 screen = Screen()
@@ -8,32 +10,27 @@ screen.setup(width=600, height=600)
 screen.bgcolor('black')
 screen.title('My Snake Game')
 screen.tracer(0)
-squares = []
-coordinates = [0,0]
 
-for i in range(1, 4):
-  square = Turtle()
-  square.shape('square')
-  square.penup()
-  square.color('white')
-  squares.append(square)
-  square.goto(coordinates)
-  coordinates[0] -= 20
+snake = Snake()
+screen.listen()
+screen.onkey(snake.up, 'Up')
+screen.onkey(snake.down, 'Down')
+screen.onkey(snake.left, 'Left')
+screen.onkey(snake.right, 'Right')
+
+dot = Dot()
+scoreboard = ScoreBoard()
   
 while game_on:
   screen.update()
   time.sleep(0.1) # adding a short delay
+  snake.move()
+  scoreboard.set_scoreboard()
   
-  for square in range(len(squares) - 1, 0, -1):
-    x = squares[square - 1].xcor()
-    y = squares[square - 1].ycor()
-    squares[square].goto(x, y)
-    
-  squares[0].forward(20)
-  squares[0].left(90)  
-    
-    
-
+  if snake.snake[0].distance(dot) < 15: # when a snake hits a dot - refresh random position
+    dot.refresh()
+    scoreboard.update_scoreboard()
+  
 
 
 screen.exitonclick()
