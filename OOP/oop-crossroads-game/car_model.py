@@ -18,3 +18,6 @@ class Car(Turtle):
     def move(self):
         new_x = self.xcor() - self.move_distance
         self.goto(new_x, self.ycor())
+        
+    def increase_speed(self):
+        self.move_distance += MOVE_INCREMENT

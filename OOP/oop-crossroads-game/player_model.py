@@ -16,4 +16,7 @@ class Player(Turtle):
         new_y = self.ycor() + MOVE_DISTANCE  # Calculate the new y-coordinate
         self.goto(self.xcor(), new_y)  # Move to the new position on the y-axis
         
-    
+        # OR: self.forward(MOVE_DISTANCE)
+        
+    def reset(self):
+        self.goto(STARTING_POSITION) 
