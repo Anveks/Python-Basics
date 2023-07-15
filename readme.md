@@ -686,6 +686,34 @@ Examples of usage:
 
 In addition to lists and strings, slicing can also be applied to **tuples** and other iterable objects that **support indexing**.
 
+## Files, Directories and Paths in Python
 
+You don't need any fs-libraries to read/write/append files in Python. There are two ways:
 
+- Old way:
 
+      file = open('my_file.txt')
+      content = file.read()
+      print(content)
+      file.close()
+
+NB: Closing the file after reading its contents is good practice because it releases the system resources associated with the file. 
+
+- Using 'with' statement:
+
+      with open('random_practices/my_file.txt', mode='r') as file: # mode = "read only"
+      content = file.read()
+      print(content)
+      
+      with open('random_practices/new_file.txt', mode='w') as file: # mode = 'write'
+      file.write('My name is Darth Vader.')
+
+In case of "with" statement, there is no need to close the file after using it - the file will be closed automatically.
+
+## Absolute vs Relative Filepaths
+
+Absolute and relative filepaths are two ways of to specify the location of a file in a file system.
+
+An **absolute file path** provides the complete path starting from the root directory to the file. It includes all the directories and subdirectories necessary to locate the file. An absolute file path is independent of the current working directory. It typically starts with the root directory symbol (e.g., / in Unix-based systems or C:\ in Windows systems) and specifies all the directories and subdirectories leading to the file. For example: /home/user/documents/file.txt or C:\Users\user\Documents\file.txt.
+
+A **relative file path** specifies the location of a file relative to the current working directory. It does not include the complete path from the root directory. Instead, it specifies the file's location in relation to the current working directory. Relative file paths are useful when you want to refer to files within the same directory or in directories relative to the current working directory. For example, if the current working directory is /home/user, a relative file path like documents/file.txt would refer to the file located at /home/user/documents/file.txt. Also, it is quite useful to use dots instead: ./ to specify the current folder, ../ to specify the parent folder of the current folder.

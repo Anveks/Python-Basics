@@ -23,7 +23,7 @@ while game_is_on:
     screen.update()
 
     # Generate a car randomly
-    if random.randint(0, 15) < 5:
+    if random.randint(0, 15) > 10:
         new_car = Car()
         cars.append(new_car)
 
@@ -36,6 +36,7 @@ while game_is_on:
             scoreboard.update_scoreboard()
 
     # Check for collisions with the player
+    
     for car in cars:
         if car.distance(player) < 20:
             game_is_on = False
