@@ -717,3 +717,37 @@ Absolute and relative filepaths are two ways of to specify the location of a fil
 An **absolute file path** provides the complete path starting from the root directory to the file. It includes all the directories and subdirectories necessary to locate the file. An absolute file path is independent of the current working directory. It typically starts with the root directory symbol (e.g., / in Unix-based systems or C:\ in Windows systems) and specifies all the directories and subdirectories leading to the file. For example: /home/user/documents/file.txt or C:\Users\user\Documents\file.txt.
 
 A **relative file path** specifies the location of a file relative to the current working directory. It does not include the complete path from the root directory. Instead, it specifies the file's location in relation to the current working directory. Relative file paths are useful when you want to refer to files within the same directory or in directories relative to the current working directory. For example, if the current working directory is /home/user, a relative file path like documents/file.txt would refer to the file located at /home/user/documents/file.txt. Also, it is quite useful to use dots instead: ./ to specify the current folder, ../ to specify the parent folder of the current folder.
+
+## Modules & Libraries to Work with Data
+
+Since Python is often used in data analysis, there are many tools for working with different types of files and data that are either built-in or can be installed separately. For example, a CSV (Comma-Separated Values) module:
+
+      import csv
+
+      # Open the CSV file
+      with open('data.csv', mode='r') as file:
+      # Create a CSV reader object
+      content = csv.reader(file)
+
+      # Iterate over each row in the CSV file
+      for row in content:
+            # Access the data in each row
+            print(row)
+
+In this using the csv.reader method automatically converts the file into an object that we name 'content'; content is iterable, and each of its elements is presented as a list.
+
+**Pandas library**: another very popular Python library for data manipulation and analysis.
+
+      pip install pandas
+
+Documentation: https://pandas.pydata.org/docs/
+
+      import pandas
+
+      data = pandas.read_csv('data.csv')
+
+The data will be represented as a table. It is possible to access the table values simpy by defining the name of the column.
+
+Pandas provides two primary data structures: *Series* and *DataFrame*: 
+- Series is a one-dimensional labeled array capable of holding any data type; 
+- DataFrame is a two-dimensional table-like data structure with columns of potentially different data types.
