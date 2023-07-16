@@ -751,3 +751,19 @@ The data will be represented as a table. It is possible to access the table valu
 Pandas provides two primary data structures: *Series* and *DataFrame*: 
 - Series is a one-dimensional labeled array capable of holding any data type; 
 - DataFrame is a two-dimensional table-like data structure with columns of potentially different data types.
+
+## List Comprehension 
+
+List comprehension is a unique feature of Python. It is the ultimate 'one-liner':
+
+      new_list = [for item in list]
+
+What we do here is  creating a new list **by iterating** over an existing iterable (such as a list, tuple, or string). It is also possible to apply expressions or conditions to each element! Example:
+
+      list = [0,1,2]
+      new_list = [item + 1 for item in list] # Output: [1,2,3]
+
+Conditions:
+
+      list = [2,4,5]
+      new_list = [item for item in list if item % 2 == 0]
