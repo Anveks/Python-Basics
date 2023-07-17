@@ -11,3 +11,4 @@ print(doubled_list)
 # squared nums
 squared_list = [num ** 2 for num in list]
 print(squared_list)
+

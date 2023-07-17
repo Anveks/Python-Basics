@@ -15,7 +15,6 @@ turtle.shape(image)
 states_num = int(len(data.state)) # number of all states
 correct_answers = 0 # tracking the score
 guessed_states = [] # list of guesses for the if-else condition later
-states_to_learn = []
 
 # creating a loop that runs untill the guesses num is equal to the states num
 while states_num != correct_answers:
@@ -27,11 +26,12 @@ while states_num != correct_answers:
     
     # secret input to create a file with all the non-guessed states:
     if answer_state.lower().strip() == 'exit':
-        for state in state_names:
-          if state.lower().strip() not in guessed_states:
-            states_to_learn.append(state)
-            learn_data = pandas.DataFrame(states_to_learn)
-            learn_data.to_csv('states_to_learn.csv')
+        states_to_learn = [state for state in state_names if state.lower() not in guessed_states]
+        # for state in state_names:
+        #   if state.lower().strip() not in guessed_states:
+        #     states_to_learn.append(state)
+        learn_data = pandas.DataFrame(states_to_learn)
+        learn_data.to_csv('states_to_learn.csv')
         break
 
     if answer_state.lower().strip() not in guessed_states: # block duplications

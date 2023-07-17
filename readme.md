@@ -767,3 +767,32 @@ Conditions:
 
       list = [2,4,5]
       new_list = [item for item in list if item % 2 == 0]
+
+## Dictionary Comprehension
+
+Same as list comprehension but with dictionaries: allows you to create dictionaries by specifying key-value pairs using a compact syntax. Here's the general syntax for dictionary comprehension. Example:
+
+      student_names = {'Dave', 'Tom', 'John', 'Lucas'}
+      student_grades = { student: random.randint(1, 100) for student in student_names }
+
+Example for creating a new dictionary with a condition:
+
+      student_names = {'Dave', 'Tom', 'John', 'Lucas', 'Alice', 'Jake', 'Dean', 'Sam', 'Caroline', 'Jane', 'Matthew', 'Chloe'}
+      student_grades = { student: random.randint(1, 100) for student in student_names }
+      passed_students = { student:grade for (student, grade) in student_grades.items() if grade >= 60 }
+
+## Tkinter and GUI
+
+Tkinter is a built-in Python module for creating graphical user interfaces (GUIs). It provides a set of tools and widgets to create windows, buttons, labels, input fields, and other GUI elements. Tkinter is widely used and comes pre-installed with Python, making it easily accessible for creating desktop applications with a graphical interface.
+
+      import tkinter
+
+      window = tkinter.Tk()
+      window.title('My First GUI Programm')
+
+      window.mainloop() # there is a built-in while loop inside
+
+You can create components and place them inside the window like this:
+
+      my_label = tkinter.Label(text="I am a label!", font=('Gothic', 24, 'bold'))
+      my_label.pack() # this method places the label inside the window
