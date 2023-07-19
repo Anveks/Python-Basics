@@ -796,3 +796,29 @@ You can create components and place them inside the window like this:
 
       my_label = tkinter.Label(text="I am a label!", font=('Gothic', 24, 'bold'))
       my_label.pack() # this method places the label inside the window
+
+## *args and **kwargs 
+
+In Python, *args and **kwargs are used in function definitions to allow the function to accept a variable number of arguments.
+
+- The *args syntax allows you to pass a variable number of non-keyword arguments to a function. The *args parameter inside the function definition gathers all the non-keyword arguments into a tuple, which can then be accessed within the function. The name args is a convention, but you can use any valid variable name with the * prefix.
+
+**NB**: there is a similar concept in JavaScript called the 'rest parameter': it allows a function to accept an indefinite number of arguments as an array. 
+
+- The **kwargs stands for 'key word arguments' and it is only different from the *args because it allows us to pass a variable number of *keyword arguments* to a function. It gathers all the parameters into a dictionary where the keys are argument names and the values are argument values. 
+
+            def print_info(**kwargs):
+                  for key, value in kwargs.items():
+                        print(f"{key}: {value}")
+
+                  print_info(name="John", age=30, occupation="Engineer")
+                  # Output:{'name': 'John', 'age': 30, 'occupation': 'Engineer'}
+
+A more vivid example of **kwargs:
+
+            def calc(n, **kwargs)
+                  print(kwargs)
+                  n += kwargs['add']
+                  n *= kwargs['multiply']
+                  print('n')
+            calc(2, add=2, multiply=3)
