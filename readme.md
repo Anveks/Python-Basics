@@ -822,3 +822,13 @@ A more vivid example of **kwargs:
                   n *= kwargs['multiply']
                   print('n')
             calc(2, add=2, multiply=3)
+
+## Dynamic Typing
+Python is strongly, dynamically typed.
+
+- **Strong** typing means that the type of a value doesn't change in unexpected ways. A string containing only digits doesn't magically become a number, as may happen in Perl. Every change of type requires an explicit conversion.
+- **Dynamic** typing means that runtime objects (values) have a type, as opposed to static typing where variables have a type.
+
+On the one hand, Python is a language that is strongly typed - it holds on the datatype of a variable (meaning you cannot perform mathematical operations on strings, you'll only get a typeError intead); on the other - even though it knows what type a variable is, it can still change the value assigned to a certain variable.
+
+A good answer can be found here: https://stackoverflow.com/questions/11328920/is-python-strongly-typed 
