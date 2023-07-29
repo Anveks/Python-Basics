@@ -9,17 +9,17 @@ NB: An amazing site that visualizes code execution: https://pythontutor.com/ . N
 Python is a versatile and widely-used programming language known for its simplicity and readability. It was created by Guido van Rossum and first released in 1991. Python is an interpreted, high-level language, meaning it is designed to be easy to understand and write code quickly.
 
 Table of Contents:
-   1.1. [Indentation in Python](#indentation-in-python)
-      1.1.1. [print() function](#print-function)
-      1.1.2. [input(promps) function](#inputpromps-function)
-   1.2. [Python Variables](#python-variables)
-   1.3. [Python Data Types](#python-data-types)
-      1.3.1. [f-String](#f-string)
-   1.4. [Conditional Statements](#conditional-statements)
-   1.5. [Randomisation in Python](#randomisation-in-python)
-   1.6. [Python Lists](#python-lists)
-   1.7. [For Loop](#for-loop)
-   1.8. [Functions in Python](#functions-in-python)
+- [Indentation in Python](#indentation-in-python)
+- - [print() function](#print-function)
+- - [input(promps) function](#inputpromps-function)
+- [Python Variables](#python-variables)
+- [Python Data Types](#python-data-types)
+- - [f-String](#f-string)
+- [Conditional Statements](#conditional-statements)
+- - [Randomisation in Python](#randomisation-in-python)
+- [Python Lists](#python-lists)
+- [For Loop](#for-loop)
+- [Functions in Python](#functions-in-python)
 
 ## Indentation in Python
 
@@ -801,7 +801,7 @@ You can create components and place them inside the window like this:
 
 In Python, *args and **kwargs are used in function definitions to allow the function to accept a variable number of arguments.
 
-- The *args syntax allows you to pass a variable number of non-keyword arguments to a function. The *args parameter inside the function definition gathers all the non-keyword arguments into a tuple, which can then be accessed within the function. The name args is a convention, but you can use any valid variable name with the * prefix.
+- The *args syntax allows you to pass a variable number of non-keyword arguments to a function. The *args parameter inside a function definition gathers all the non-keyword arguments into a tuple, which can then be accessed within the function. The name args is a convention, but you can use any valid variable name with the * prefix.
 
 **NB**: there is a similar concept in JavaScript called the 'rest parameter': it allows a function to accept an indefinite number of arguments as an array. 
 
