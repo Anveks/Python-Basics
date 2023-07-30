@@ -1,0 +1,10 @@
+abc.com | example@gmail.com | 12345 
+
+abc | example@gmail.com | 3456 
+
+amazon | example@gmail.com | 31098 
+
+aaaaaaaaaa | example@gmail.com | 111 
+
+amazon | example@gmail.com | #QWN9F(7cR8kL)w3 
+
