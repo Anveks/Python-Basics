@@ -43,7 +43,7 @@ def start():
 # POPUP WINDOW
 def open_popup(text):
    top = Toplevel(window)
-   top.geometry("750x250")
+   top.geometry("350x250")
    top.title("Child Window")
    Label(top, text=text, font=('Mistral 18 bold')).place(x=150,y=80)
 

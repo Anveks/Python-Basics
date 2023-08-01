@@ -832,3 +832,52 @@ Python is strongly, dynamically typed.
 On the one hand, Python is a language that is strongly typed - it holds on the datatype of a variable (meaning you cannot perform mathematical operations on strings, you'll only get a typeError intead); on the other - even though it knows what type a variable is, it can still change the value assigned to a certain variable.
 
 A good answer can be found here: https://stackoverflow.com/questions/11328920/is-python-strongly-typed 
+
+## Exceptions Handling in  Python 
+
+NB: https://pythonworld.ru/tipy-dannyx-v-python/isklyucheniya-v-python-konstrukciya-try-except-dlya-obrabotki-isklyuchenij.html
+
+When it comes to exceptions handling, there are four important keywords:
+
+- try - a block of code where something can possibly go wrong
+- except - a block of code that needs to be executed if something really goes wrong
+- else - in case there are no exceptions
+- finally - block of code that will be executed no matter what happens
+
+Example:
+
+      fruits = ['Apple', 'Pear', 'Orange']
+      def make_pie(index):
+            try:
+                  fruit = fruits[index]
+            except IndexError:
+                  print('Fruit pie')
+            else:
+                  print(fruit + ' pie')
+
+These keywords create a pattern that is commonly used in handling the exceptions. However, the except keyword always expects a certain type of error (FileNotFound, KeyError, etc). 
+
+Another example:
+
+            facebook_posts = [
+            {'Likes': 21, 'Comments': 2}, 
+            {'Likes': 13, 'Comments': 2, 'Shares': 1}, 
+            {'Likes': 33, 'Comments': 8, 'Shares': 3}, 
+            {'Comments': 4, 'Shares': 2}, 
+            {'Comments': 1, 'Shares': 1}, 
+            {'Likes': 19, 'Comments': 3}
+            ]
+
+            total_likes = 0
+
+            for post in facebook_posts:
+              try:
+                 total_likes = total_likes + post['Likes']
+              except KeyError:
+                 pass # skipping the line
+
+            print(total_likes)
+
+The **raise** keyword raises a specific exception when a condition is met or the code encounters an error. The exception raised by the program may either be an exception instance or an exception class. When you use the raise keyword, you can define what kind of error the machine should raise for a particular exception.
+
+
