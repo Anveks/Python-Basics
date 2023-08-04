@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 import random
 import pyperclip
+import json
 
 # PASSWORD GENERATOR #
 
@@ -31,6 +32,13 @@ def save():
   email = email_input.get()
   password = password_input.get()
   
+  new_data = {
+    site: {
+      'email': email,
+      'password': password
+    }
+  }
+ 
   if len(site) == 0 or len(email) == 0 or len(password) == 0: 
     messagebox.showerror(title='invalid input', message='All inputs should be complete.')
   else:
@@ -38,15 +46,40 @@ def save():
     is_ok = messagebox.askokcancel(title=site, message=f'Are the details entered correct? \n\nEmail:{email}, \npassword: {password}')
     
     if is_ok:
-      with open('./small projects/password-manager/data.txt', mode='a') as file:
-        file.write(f'{site} | {email} | {password} \n\n')
-        site_input.delete(0, END)
-        password_input.delete(0, END)
+      try:
+        with open('./small projects/password-manager/data.json', mode='r') as data_file:        
+          data = json.load(data_file) # read the old data
+          
+      except FileNotFoundError:
+          with open("data.json", "w") as data_file:
+            json.dump(new_data, data_file, indent=4)
+            
+      else:
+            data.update(new_data) # update the new data      
+            with open("data.json", "w") as data_file:  
+              json.dump(data, data_file, indent=4) # save the updated 
+              
+      finally:
+            site_input.delete(0, END)
+            password_input.delete(0, END)
         
 def generate_password():
   password_input.delete(0, END)
   password_input.insert(0, password)
   pyperclip.copy(password) # automatically copying the password 
+  
+def search():
+  site = site_input.get().lower()
+  try:
+    with open("data.json", "r") as data_file:
+      data = json.load(data_file)
+      email = data.get(site).get('email')
+      password = data.get(site).get('password')
+      messagebox.showinfo(
+        title='Site data', 
+        message=f'Email: {email},\nPassword: {password}')
+  except AttributeError:
+    messagebox.showinfo(title="404", message="There is no such site saved.")
 
 # UI SETUP #
 window = Tk()
@@ -81,5 +114,10 @@ generate_button = Button(text='Generate Password', command=generate_password)
 generate_button.grid(row=3, column=2)
 add_button = Button(text='Add', width=36, command=save)
 add_button.grid(row=4, column=1, columnspan=2)
+search_button = Button(text="Search", command=search)
+search_button.grid(row=1, column=3)
 
 window.mainloop()
+
+# for non-json files:
+# file.write(f'{site} | {email} | {password} \n\n')

@@ -880,4 +880,16 @@ Another example:
 
 The **raise** keyword raises a specific exception when a condition is met or the code encounters an error. The exception raised by the program may either be an exception instance or an exception class. When you use the raise keyword, you can define what kind of error the machine should raise for a particular exception.
 
+## Working with JSON in Python 
+
+JSON - JavaScript Object Notation - is also used in Python. There are 3 common in-built functions that can help us handle any JSON data:
+
+- json.dump() - write
+            with open('./small projects/password-manager/data.json', mode='r') as file:
+                  json.dump(new_data, file, indent=4)
+- json.load() - read
+            data = json.load(file)
+                  print(data)
+- json.update() - update
+
 
