@@ -1,6 +1,6 @@
 from tkinter import *
-import time
 import math
+
 # CONSTANTS #
 PINK = "#e2979c"
 RED = "#e7305b"
@@ -43,7 +43,7 @@ def start():
 # POPUP WINDOW
 def open_popup(text):
    top = Toplevel(window)
-   top.geometry("350x250")
+   top.geometry("50x250")
    top.title("Child Window")
    Label(top, text=text, font=('Mistral 18 bold')).place(x=150,y=80)
 
@@ -76,11 +76,11 @@ window.config(padx=100, pady=50, bg=YELLOW) # setting the paddings
 canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
 tomato_image = PhotoImage(file="./small projects/pomodoro-app/tomato.png") # we store the img
 canvas.create_image(100, 112, image=tomato_image) # first we specify the height and width
-timer_text = canvas.create_text(100, 130, text='00:00', fill='white', font={FONT_NAME, 35, 'bold'})
+timer_text = canvas.create_text(100, 130, text='00:00', fill='white', font=(FONT_NAME, 35, 'bold'))
 
 start_button = Button(window, text='start', command=start, highlightthickness=0)
 reset_button = Button(window, text='reset', command=reset, highlightthickness=0)
-title_label = Label(text='Timer', bg=YELLOW, fg=GREEN, font={FONT_NAME, 50})
+title_label = Label(text='Timer', bg=YELLOW, fg=GREEN, font=(FONT_NAME, 50))
 check_marks = Label(bg=YELLOW, fg=GREEN)
 
 start_button.grid(column=0, row=2)
